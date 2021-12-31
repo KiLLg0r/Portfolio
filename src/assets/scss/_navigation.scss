@@ -1,0 +1,139 @@
+@use "./colors" as *;
+
+.primary-header {
+  --gap: 1rem;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+
+  padding: 1rem 2rem;
+
+  background: linear-gradient(45deg, $accent-dark-600, $accent-dark-900);
+
+  .logo {
+    display: block;
+    height: 2rem;
+  }
+
+  .primary-navigation,
+  .secondary-navigation {
+    display: flex;
+    gap: var(--gap);
+
+    list-style: none;
+
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+
+    a {
+      color: $gray-light-900;
+      text-decoration: none;
+      font-size: 1.125rem;
+      font-weight: 300;
+
+      display: flex;
+      gap: calc(var(--gap) / 2);
+
+      transition: color 0.25s ease-in-out;
+
+      & > span {
+        font-weight: 600;
+      }
+
+      &:hover {
+        color: $accent-dark-200;
+      }
+    }
+    .link-icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    position: absolute;
+    z-index: 9999;
+    right: 2rem;
+  }
+  .line {
+    fill: none;
+    stroke: $gray-light-900;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+}
+
+@media (max-width: 50rem) {
+  .primary-header {
+    --gap: 1.5rem;
+    .primary-navigation {
+      position: fixed;
+      inset: 0 0 0 33%;
+
+      flex-direction: column;
+
+      padding: min(30vh, 10rem) 2rem;
+
+      background: $gray-dark-200;
+      opacity: 0.95;
+      backdrop-filter: blur(1rem);
+
+      a {
+        font-size: 1.5rem;
+      }
+      .link-icon {
+        font-size: 2rem;
+      }
+    }
+    .menu {
+      display: block;
+    }
+  }
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-header {
+    .primary-navigation {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+    }
+  }
+}

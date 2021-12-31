@@ -1,0 +1,66 @@
+@use "./colors" as *;
+@use "./navigation";
+@use "./home";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  background: $gray;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 1.25rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: $gray-light-900;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  &.cta-btn {
+    background-color: $accent-dark-100;
+    &:hover {
+      background-color: $accent-dark-400;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  &.secondary-btn {
+    outline: 2px solid $gray-light-900;
+    &:hover {
+      background-color: $gray-light-900;
+      color: $gray-dark-900;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+  }
+}
