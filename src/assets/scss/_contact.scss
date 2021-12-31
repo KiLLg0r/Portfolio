@@ -1,0 +1,160 @@
+@use "./colors" as colors;
+
+#contact {
+  display: grid;
+  place-items: center;
+  .ct {
+    width: min(90%, 1000px);
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .line {
+    position: absolute;
+    top: 1.125rem;
+    left: -50vw;
+    height: 0.25rem;
+    width: 100vw;
+    background: colors.$gray-light-900;
+    z-index: 50;
+  }
+
+  .title {
+    font-size: 2rem;
+    color: colors.$gray-light-900;
+    position: relative;
+    width: 12rem;
+    background-color: colors.$gray;
+    height: auto;
+    text-align: center;
+    z-index: 100;
+
+    span {
+      font-weight: 200;
+    }
+  }
+
+  .contact-form {
+    margin-top: auto;
+    position: relative;
+  }
+
+  .wrapper {
+    &.first-w {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .f-wrapper {
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    margin-block: 0.5rem;
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: 0.65rem;
+      transform: translateY(-50%);
+      color: colors.$gray-light-500;
+      padding: 0.25rem 0.5rem;
+      pointer-events: none;
+      transition: all 0.35s;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      font-size: 1.675rem;
+      color: colors.$gray-light-500;
+      transition: all 0.35s;
+    }
+
+    input,
+    textarea {
+      height: inherit;
+      width: 100%;
+      border: 2px solid colors.$gray-light-500;
+      border-radius: 0.5rem;
+      outline: none;
+      background: transparent;
+      color: colors.$gray-light-900;
+      font-size: 1rem;
+      text-indent: 1rem;
+      transition: all 0.35s;
+      text-indent: 4rem;
+      padding-right: 3rem;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: colors.$accent;
+      text-indent: 1rem;
+    }
+    input:focus ~ .icon,
+    textarea:focus ~ .icon {
+      color: colors.$accent;
+    }
+    input:focus ~ .label {
+      background: colors.$gray;
+      color: colors.$accent;
+      transform: translateY(-2.875rem);
+    }
+  }
+
+  .w-message {
+    height: 10rem;
+    .icon {
+      top: 1rem;
+      transform: translateY(0);
+    }
+    .label {
+      top: 0.8rem;
+      transform: translateY(0);
+    }
+    textarea {
+      padding-left: 1rem;
+      padding-top: 2.5rem;
+      text-indent: 0;
+    }
+    textarea:focus {
+      padding-top: 1rem;
+      text-indent: 0;
+    }
+    textarea:focus ~ .label {
+      background: colors.$gray;
+      color: colors.$accent;
+      transform: translateY(-1.8625rem);
+    }
+  }
+
+  .contact-btn {
+    height: 4rem;
+    width: 100%;
+    background-color: colors.$accent;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    transition: all 0.35s;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: colors.$accent-dark-500;
+      color: colors.$gray-light-900;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #contact {
+    .wrapper {
+      display: block;
+    }
+    .line {
+      left: -1rem;
+    }
+  }
+}

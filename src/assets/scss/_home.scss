@@ -1,9 +1,6 @@
 @use "./colors" as *;
 
 #home {
-  height: calc(100vh - 4rem);
-  width: 100%;
-  margin-inline: auto;
   position: relative;
 
   .content {
