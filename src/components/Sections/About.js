@@ -28,7 +28,7 @@ const About = () => {
   return (
     <section id="about">
       <AboutSVG className={`${showSVG ? "animated" : ""}`} />;
-      {/* <div className="row">
+      <div className="row">
         <div className="card custom-border border-1">
           <div className="text">
             <div className="icon">
@@ -70,7 +70,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
