@@ -112,9 +112,23 @@
 
       padding: min(30vh, 10rem) 2rem;
 
-      background: $gray-dark-200;
-      opacity: 0.95;
-      backdrop-filter: blur(1rem);
+      @supports (backdrop-filter: blur(1rem)) {
+        .primary-header {
+          .primary-navigation {
+            background: hsl(0 0% 100% / 0.1);
+            backdrop-filter: blur(1rem);
+          }
+        }
+      }
+
+      @supports not (backdrop-filter: blur(1rem)) {
+        .primary-header {
+          .primary-navigation {
+            background: $gray-dark-200;
+            opacity: 0.95;
+          }
+        }
+      }
 
       a {
         font-size: 1.5rem;
@@ -125,15 +139,6 @@
     }
     .menu {
       display: block;
-    }
-  }
-}
-
-@supports (backdrop-filter: blur(1rem)) {
-  .primary-header {
-    .primary-navigation {
-      background: hsl(0 0% 100% / 0.1);
-      backdrop-filter: blur(1rem);
     }
   }
 }

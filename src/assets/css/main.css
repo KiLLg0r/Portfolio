@@ -98,9 +98,18 @@
     inset: 0 0 0 33%;
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
-    background: #20232a;
-    opacity: 0.95;
-    backdrop-filter: blur(1rem);
+  }
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary-header .primary-navigation .primary-header .primary-navigation {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(1rem);
+    }
+  }
+  @supports not (backdrop-filter: blur(1rem)) {
+    .primary-header .primary-navigation .primary-header .primary-navigation {
+      background: #20232a;
+      opacity: 0.95;
+    }
   }
   .primary-header .primary-navigation a {
     font-size: 1.5rem;
@@ -110,12 +119,6 @@
   }
   .primary-header .menu {
     display: block;
-  }
-}
-@supports (backdrop-filter: blur(1rem)) {
-  .primary-header .primary-navigation {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(1rem);
   }
 }
 #home {
