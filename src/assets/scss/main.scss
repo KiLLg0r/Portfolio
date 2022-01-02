@@ -107,3 +107,14 @@ section {
 .alert-fade-in {
   position: relative;
 }
+
+.content {
+  width: min(90%, 1000px);
+  height: 100%;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  position: relative;
+}

@@ -1,40 +1,25 @@
-import { ReactComponent as CodeSVG } from "../../assets/svg/code.svg";
-import { ReactComponent as PersonSVG } from "../../assets/svg/person.svg";
-import { ReactComponent as HiringSVG } from "../../assets/svg/hiring.svg";
-import { ReactComponent as AboutSVG } from "../../assets/svg/about-me.svg";
+import Profile from "../../assets/img/Picture.jpeg";
 
-import { useEffect, useState } from "react";
-
-import "../../assets/css/about-me.css";
+import { useState, useEffect } from "react";
 
 const About = () => {
-  const [showSVG, setShowSVG] = useState(false);
-
-  const options = {
-    threshold: 0.5,
-  };
-
-  useEffect(() => {
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setShowSVG(true);
-        }
-      });
-    }, options);
-    observer.observe(document.querySelector("#about"));
-    return () => observer.disconnect();
-  });
   return (
-    <section id="about" style={{ display: "none" }}>
-      <AboutSVG className={`${showSVG ? "animated" : ""}`} />;
-      <div className="row">
-        <div className="card custom-border border-1">
-          <div className="text">
-            <div className="icon">
-              <CodeSVG />
+    <section id="about">
+      <div className="content">
+        <div className="group">
+          <div className="title">
+            01 <span>About</span>
+          </div>
+          <div className="line"></div>
+        </div>
+        <div className="about-img" data-aos="zoom-in-left">
+          <img src={Profile} alt="Auto portrait" />
+        </div>
+        <div className="about-text">
+          <div className="card color-1" data-aos="fade-right">
+            <div className="title">
+              00 <span>What I do?</span>
             </div>
-            <div className="title">What I do?</div>
             <div className="desc">
               I create <span>web applications, websites and UX/UI designs</span>. My portfolio contains both{" "}
               <span>static and fullstack</span> sites (including databases and back-end for them) and{" "}
@@ -42,26 +27,20 @@ const About = () => {
               <span>React and Laravel</span>.
             </div>
           </div>
-        </div>
-        <div className="card custom-border border-2">
-          <div className="text">
-            <div className="icon">
-              <PersonSVG />
+          <div className="card color-2" data-aos="fade-left">
+            <div className="title">
+              01 <span>About myself</span>
             </div>
-            <div className="title">About myself</div>
             <div className="desc">
               Hello! I'm <span>Rob</span>. I am here to help you leave your customers <span>speechless</span> who will
               come to <span>your site</span>. I am a passionate programming student who <span>3 years ago</span>{" "}
               discovered web development and has been practicing it ever since, <span>improving his skills daily</span>.
             </div>
           </div>
-        </div>
-        <div className="card custom-border border-3">
-          <div className="text">
-            <div className="icon">
-              <HiringSVG />
+          <div className="card color-3" data-aos="fade-right">
+            <div className="title">
+              02 <span>Why hire me?</span>
             </div>
-            <div className="title">Why hire me?</div>
             <div className="desc">
               Well, there are <span>many reasons</span>. The most important thing would be that I have
               <span> patience</span> with the clients and I <span>focus</span> more on what <span>they need</span>. How
