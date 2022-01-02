@@ -47,14 +47,20 @@ const Contact = () => {
             Invalid email
           </div>
           <div className="wrapper first-w">
-            <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
+            <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
               <input type="text" spellCheck="false" ref={nameRef} required />
               <div className="label">Name</div>
               <div className="icon">
                 <BiUserCircle />
               </div>
             </div>
-            <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+            <div
+              className="f-wrapper"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="250"
+              data-aos-once="true"
+            >
               <input type="email" ref={emailRef} required onChange={handleEmailChange} />
               <div className="label">Email</div>
               <div className="icon">
@@ -63,7 +69,13 @@ const Contact = () => {
             </div>
           </div>
           <div className="wrapper second-w">
-            <div className="f-wrapper w-message" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div
+              className="f-wrapper w-message"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+              data-aos-once="true"
+            >
               <textarea cols="30" rows="8" ref={messageRef} required></textarea>
               <div className="label">Message</div>
               <div className="icon">
@@ -71,7 +83,13 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="wrapper third-w" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+          <div
+            className="wrapper third-w"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="750"
+            data-aos-once="true"
+          >
             <input type="submit" value="Send message" className="contact-btn" />
           </div>
         </form>
