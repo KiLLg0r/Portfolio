@@ -42,7 +42,7 @@
   .wrapper {
     &.first-w {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 
@@ -51,7 +51,7 @@
     display: flex;
     height: 3rem;
     width: 100%;
-    margin-block: 0.5rem;
+    margin-block: 1rem;
 
     .label {
       position: absolute;
@@ -152,6 +152,9 @@
   #contact {
     .wrapper {
       display: block;
+    }
+    .f-wrapper {
+      margin-block: 1.5rem;
     }
   }
   .line {

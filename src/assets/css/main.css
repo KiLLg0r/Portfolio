@@ -223,14 +223,14 @@
 }
 #contact .wrapper.first-w {
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 #contact .f-wrapper {
   position: relative;
   display: flex;
   height: 3rem;
   width: 100%;
-  margin-block: 0.5rem;
+  margin-block: 1rem;
 }
 #contact .f-wrapper .label {
   position: absolute;
@@ -324,6 +324,9 @@
 @media screen and (max-width: 930px) {
   #contact .wrapper {
     display: block;
+  }
+  #contact .f-wrapper {
+    margin-block: 1.5rem;
   }
 
   .line {
