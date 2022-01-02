@@ -1,7 +1,5 @@
 import Profile from "../../assets/img/Picture.jpeg";
 
-import { useState, useEffect } from "react";
-
 const About = () => {
   return (
     <section id="about">
