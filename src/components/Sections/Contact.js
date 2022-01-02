@@ -47,14 +47,14 @@ const Contact = () => {
             Invalid email
           </div>
           <div className="wrapper first-w">
-            <div className="f-wrapper">
+            <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
               <input type="text" spellCheck="false" ref={nameRef} required />
               <div className="label">Name</div>
               <div className="icon">
                 <BiUserCircle />
               </div>
             </div>
-            <div className="f-wrapper">
+            <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
               <input type="email" ref={emailRef} required onChange={handleEmailChange} />
               <div className="label">Email</div>
               <div className="icon">
@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="wrapper second-w">
-            <div className="f-wrapper w-message">
+            <div className="f-wrapper w-message" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
               <textarea cols="30" rows="8" ref={messageRef} required></textarea>
               <div className="label">Message</div>
               <div className="icon">
@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="wrapper third-w">
+          <div className="wrapper third-w" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
             <input type="submit" value="Send message" className="contact-btn" />
           </div>
         </form>

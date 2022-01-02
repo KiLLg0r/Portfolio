@@ -179,6 +179,10 @@
   height: 100%;
   filter: brightness(0.625);
 }
+#home .home-svg svg {
+  height: 100%;
+  width: 100%;
+}
 
 @media screen and (max-width: 930px) {
   #home .home-svg {
@@ -203,9 +207,9 @@
 #contact .line {
   position: absolute;
   top: 1.125rem;
-  left: -50vw;
+  left: -12rem;
   height: 0.25rem;
-  width: 100vw;
+  width: 90vw;
   background: #eaeaeb;
   z-index: 50;
 }
@@ -331,7 +335,7 @@
     display: block;
   }
   #contact .line {
-    left: -1rem;
+    left: -0.5rem;
   }
 }
 #about .row {

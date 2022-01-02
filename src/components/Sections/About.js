@@ -26,7 +26,7 @@ const About = () => {
     return () => observer.disconnect();
   });
   return (
-    <section id="about">
+    <section id="about" style={{ display: "none" }}>
       <AboutSVG className={`${showSVG ? "animated" : ""}`} />;
       <div className="row">
         <div className="card custom-border border-1">

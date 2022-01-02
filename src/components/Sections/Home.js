@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section id="home">
       <div className="content">
-        <div className="home-text">
+        <div className="home-text" data-aos="fade-up-left">
           <h1 className="main-title">
             Hi! I'm Rob, a <span>&lt;WebDev /&gt;</span> !
           </h1>
@@ -22,7 +22,9 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <HomeSVG className="home-svg" />
+        <div className="home-svg" data-aos="fade-down-right">
+          <HomeSVG />
+        </div>
       </div>
     </section>
   );
