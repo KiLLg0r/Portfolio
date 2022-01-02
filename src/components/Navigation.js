@@ -26,7 +26,7 @@ const Navigation = () => {
 
   return (
     <header className="primary-header">
-      <img src={logo} alt="logo" className="logo" data-aos="fade-right" />
+      <img src={logo} alt="logo" className="logo" data-aos={`${width > 801 ? "fade-right" : ""}`} />
       <button className={`menu ${open ? "opened" : ""}`} aria-label="Menu" onClick={updateMenu} ref={menuRef}>
         <svg width="48" height="48" viewBox="0 0 100 100">
           <path
@@ -40,7 +40,7 @@ const Navigation = () => {
           />
         </svg>
       </button>
-      <nav data-aos="fade-left">
+      <nav data-aos={`${width > 801 ? "fade-left" : ""}`}>
         <ul className="primary-navigation" style={{ transform: tr }}>
           <li>
             <a href="#home">
