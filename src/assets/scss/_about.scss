@@ -41,7 +41,7 @@
 
     .line {
       position: absolute;
-      top: 3rem;
+      top: 3.5rem;
       left: -12rem;
       height: 0.25rem;
       width: 90vw;
@@ -86,15 +86,12 @@
           font-weight: 300;
         }
       }
-      .desc {
-        font-size: 0.9rem;
-      }
     }
   }
 
   .about-img {
-    grid-column: 9/12;
-    grid-row: 4/13;
+    grid-column: 9/13;
+    grid-row: 3/13;
     height: 100%;
     width: 100%;
   }
@@ -103,7 +100,7 @@
     border-radius: 0.75rem;
     width: 100%;
     height: auto;
-    box-shadow: 1.5rem 1.5rem $accent-dark-400;
+    box-shadow: 0 0 5rem 0.25rem $accent;
   }
 }
 
@@ -122,6 +119,10 @@
       width: 60%;
       height: auto;
       margin: 1.5rem auto;
+
+      img {
+        box-shadow: 1.5rem 1.5rem $accent;
+      }
     }
     .about-text {
       .card {

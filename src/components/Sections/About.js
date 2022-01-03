@@ -10,7 +10,7 @@ const About = () => {
           </div>
           <div className="line"></div>
         </div>
-        <div className="about-img" data-aos="zoom-in-left">
+        <div className="about-img" data-aos="fade-up-left">
           <img src={Profile} alt="Auto portrait" />
         </div>
         <div className="about-text">
