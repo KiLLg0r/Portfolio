@@ -15,7 +15,11 @@ body[data-theme="dark"] {
 
   --charcoal: #445469;
   --dark-charcoal: #293340;
+  --white: #f8f6f0;
   --light-gray: #d9d7d2;
+  --royal-blue: #3a5ad1;
+  --dark-royal-blue: #2e48a6;
+  --green: #64e141;
 }
 
 body[data-theme="light"] {

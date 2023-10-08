@@ -1,0 +1,21 @@
+.next {
+  border-radius: 50%;
+  border: 2px solid var(--primary-foreground);
+  display: grid;
+  place-items: center;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

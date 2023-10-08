@@ -37,6 +37,9 @@ const Navigation = () => {
           <a href="#about" className={styles.navigation__links__link}>
             About
           </a>
+          <a href="#skills" className={styles.navigation__links__link}>
+            Skills
+          </a>
           <a href="#portfolio" className={styles.navigation__links__link}>
             Portfolio
           </a>

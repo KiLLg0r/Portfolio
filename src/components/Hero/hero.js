@@ -1,7 +1,7 @@
 import styles from "./hero.module.scss";
 
-// Icons
-import { BsChevronDoubleDown } from "react-icons/bs";
+// Components
+import ScrollNext from "@components/ScrollNext/scrollNext";
 
 const Home = () => {
   return (
@@ -18,9 +18,7 @@ const Home = () => {
           My current focus is to create outstanding digital products
         </h4>
       </div>
-      <a className={styles.next} href="#about">
-        <BsChevronDoubleDown />
-      </a>
+      <ScrollNext to="#about" />
     </header>
   );
 };
