@@ -1,0 +1,80 @@
+@import "typed";
+
+.hero {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+
+  .group {
+    width: 100%;
+    text-align: center;
+
+    .title {
+      font-size: 4rem;
+
+      span {
+        @include typed(
+          (
+            "Robert": (
+              color: #4169e1,
+            ),
+            "a student": (
+              color: #64e141,
+            ),
+            "a JavaScript Developer": (
+              color: #f0db4f,
+            ),
+          )
+        );
+      }
+
+      &__secondary {
+        font-size: 2.5rem;
+      }
+
+      &__tertiary {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .next {
+    border-radius: 50%;
+    border: 2px solid var(--primary-foreground);
+    display: grid;
+    place-items: center;
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+
+    animation: float 1s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .group {
+      .title {
+        font-size: 3rem;
+
+        &__secondary {
+          font-size: 1.5rem;
+        }
+
+        &__tertiary {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

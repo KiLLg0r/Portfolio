@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "13.5.4",
+    "prettier": "^3.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "react-icons": "^4.11.0",
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "eslint": "^8",
