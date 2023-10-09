@@ -16,13 +16,13 @@
         @include typed(
           (
             "Robert": (
-              color: #4169e1,
+              color: var(--royal-blue),
             ),
             "a student": (
-              color: #64e141,
+              color: var(--green),
             ),
             "a JavaScript Developer": (
-              color: #f0db4f,
+              color: var(--yellow),
             ),
           )
         );

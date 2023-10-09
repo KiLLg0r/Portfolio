@@ -96,10 +96,10 @@
     .navigation {
       position: absolute;
       top: 4rem;
-      left: 1rem;
+      left: 2rem;
       z-index: 1000;
 
-      width: calc(100% - 2rem);
+      width: calc(100% - 4rem);
       height: calc(100vh - 5rem);
 
       justify-content: space-between;
@@ -112,7 +112,7 @@
 
       .delimiter {
         height: 2px;
-        width: 80%;
+        width: 50%;
         margin-inline: auto;
       }
 

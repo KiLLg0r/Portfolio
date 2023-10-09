@@ -5,7 +5,7 @@ import ScrollNext from "@components/ScrollNext/scrollNext";
 
 const Home = () => {
   return (
-    <header className={styles.hero} id="home">
+    <section className={styles.hero} id="home">
       <div className={styles.hidden} aria-hidden={true}></div>
       <div className={styles.group}>
         <h1 className={styles.title}>
@@ -19,7 +19,7 @@ const Home = () => {
         </h4>
       </div>
       <ScrollNext to="#about" />
-    </header>
+    </section>
   );
 };
 
