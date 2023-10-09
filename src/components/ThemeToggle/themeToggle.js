@@ -8,7 +8,7 @@ import styles from "./themeToggle.module.scss";
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(
-    window.localStorage.getItem("theme") || "dark",
+    window && (window.localStorage.getItem("theme") || "dark"),
   );
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
