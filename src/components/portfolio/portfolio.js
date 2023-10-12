@@ -1,7 +1,7 @@
 import styles from "./portfolio.module.scss";
 
 // Components
-import ProjectCard from "@components/Project Card/projectCard";
+import ProjectCard from "@components/Project card/projectCard";
 
 const getGitHubProjects = async () => {
   const res = await fetch("https://api.github.com/users/KiLLg0r/repos");
