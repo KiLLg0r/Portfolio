@@ -3,7 +3,7 @@ import "./globals.css";
 import Navigation from "@components/Navigation/navigation";
 
 export const metadata = {
-  title: "💻 Robert Oblesniuc | JavaScript Developer",
+  title: "Robert Oblesniuc | JavaScript Developer",
 };
 
 export default function RootLayout({ children }) {

@@ -1,0 +1,17 @@
+.portfolio {
+  min-height: 100vh;
+  padding-top: 6rem;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+
+  &__projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+}

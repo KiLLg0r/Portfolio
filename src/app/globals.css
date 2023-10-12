@@ -25,6 +25,13 @@ body[data-theme="dark"] {
   --dark-yellow: #ccbb37;
   --orange: #e64427;
 
+  --javascript: #f5e042;
+  --scss: #c6538c;
+  --html: #e44d26;
+  --css: #2965f1;
+  --php: #8892be;
+  --solidity: #656565;
+
   background-image: radial-gradient(
       ellipse at center,
       #000000c3 0,

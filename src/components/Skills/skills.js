@@ -10,37 +10,33 @@ const Skills = () => {
       <div className={styles.skills__group}>
         <div className={styles.skills__group__title}>FRONT-END</div>
         <div className={styles.skills__group__content}>
-          <div className={styles.skills__group__content__item}>HTML5</div>
-          <div className={styles.skills__group__content__item}>CSS3</div>
-          <div className={styles.skills__group__content__item}>Sass</div>
-          <div className={styles.skills__group__content__item}>JavaScript</div>
-          <div className={styles.skills__group__content__item}>React.js</div>
-          <div className={styles.skills__group__content__item}>Next.js</div>
-          <div className={styles.skills__group__content__item}>Bootstrap</div>
-          <div className={styles.skills__group__content__item}>NextUI</div>
-          <div className={styles.skills__group__content__item}>Redux</div>
-          <div className={styles.skills__group__content__item}>
-            Framer motion
-          </div>
-          <div className={styles.skills__group__content__item}>Yjs</div>
+          <div className={styles.item}>HTML5</div>
+          <div className={styles.item}>CSS3</div>
+          <div className={styles.item}>Sass</div>
+          <div className={styles.item}>JavaScript</div>
+          <div className={styles.item}>React.js</div>
+          <div className={styles.item}>Next.js</div>
+          <div className={styles.item}>Bootstrap</div>
+          <div className={styles.item}>NextUI</div>
+          <div className={styles.item}>Redux</div>
+          <div className={styles.item}>Framer motion</div>
+          <div className={styles.item}>Yjs</div>
         </div>
       </div>
       <div className={styles.skills__group}>
         <div className={styles.skills__group__title}>BACK-END</div>
         <div className={styles.skills__group__content}>
-          <div className={styles.skills__group__content__item}>C++</div>
-          <div className={styles.skills__group__content__item}>PHP</div>
-          <div className={styles.skills__group__content__item}>WordPress</div>
-          <div className={styles.skills__group__content__item}>Python</div>
-          <div className={styles.skills__group__content__item}>Node.js</div>
-          <div className={styles.skills__group__content__item}>Axios</div>
-          <div className={styles.skills__group__content__item}>MySQL</div>
-          <div className={styles.skills__group__content__item}>PostgreSQL</div>
-          <div className={styles.skills__group__content__item}>Solidity</div>
-          <div className={styles.skills__group__content__item}>Firebase</div>
-          <div className={styles.skills__group__content__item}>
-            Google Cloud
-          </div>
+          <div className={styles.item}>C++</div>
+          <div className={styles.item}>PHP</div>
+          <div className={styles.item}>WordPress</div>
+          <div className={styles.item}>Python</div>
+          <div className={styles.item}>Node.js</div>
+          <div className={styles.item}>Axios</div>
+          <div className={styles.item}>MySQL</div>
+          <div className={styles.item}>PostgreSQL</div>
+          <div className={styles.item}>Solidity</div>
+          <div className={styles.item}>Firebase</div>
+          <div className={styles.item}>Google Cloud</div>
         </div>
       </div>
       <div style={{ display: "grid", placeItems: "center" }}>

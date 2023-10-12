@@ -1,14 +1,15 @@
+$animation-duration: 1;
+
 .skills {
   min-height: 100vh;
   padding-top: 6rem;
   position: relative;
 
   .title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--royal-blue);
   }
 
   &__group {
@@ -23,6 +24,13 @@
       color: var(--orange);
     }
 
+    &:nth-child(2) &__item {
+    }
+
+    &:has(&__item:hover) &__item {
+      animation-play-state: paused;
+    }
+
     &__title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -32,13 +40,20 @@
 
     &__content {
       text-align: center;
+    }
 
-      &__item {
-        display: inline-block;
-        padding: 0.5rem 0.75rem;
-        border-radius: 1rem;
-        background: var(--secondary-background);
-        margin: 0.25rem;
+    .item {
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 1rem;
+      background: var(--secondary-background);
+      margin: 0.25rem;
+      animation: animated_items 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background: var(--dark-royal-blue);
+        color: var(--white);
       }
     }
   }
@@ -100,8 +115,30 @@
   }
 }
 
+@for $i from 1 through 11 {
+  .skills__group:nth-child(2) .item:nth-child(#{$i}) {
+    animation-delay: #{($i * $animation-duration) * (1 / 22)}s;
+  }
+  .skills__group:nth-child(3) .item:nth-child(#{$i}) {
+    animation-delay: #{($i * $animation-duration + 11) * (1 / 22)}s;
+  }
+}
+
+@keyframes animated_items {
+  0%,
+  50% {
+    background-color: var(--secondary-background);
+    color: var(--primary-foreground);
+  }
+  25% {
+    background-color: var(--dark-royal-blue);
+    color: var(--white);
+  }
+}
+
 @media (max-width: 850px) {
   .icons {
     filter: blur(3px);
+    opacity: 0.7;
   }
 }

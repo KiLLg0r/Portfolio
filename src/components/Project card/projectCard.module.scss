@@ -1,0 +1,135 @@
+.projectCard {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background: var(--secondary-background);
+  color: var(--secondary-foreground);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .viewMore {
+    margin-top: auto;
+    display: block;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover,
+    &:focus-visible {
+      filter: brightness(1.1);
+
+      & > span {
+        transform: scale(1.05);
+      }
+
+      & > svg > path {
+        d: path(
+          "M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0"
+        );
+      }
+    }
+
+    &:active {
+      filter: brightness(0.9);
+
+      & > span {
+        transform: scale(0.95);
+      }
+
+      & > svg > path {
+        d: path(
+          "M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0"
+        );
+      }
+    }
+
+    & > span {
+      display: block;
+      position: relative;
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      z-index: 1;
+    }
+
+    & > svg {
+      fill: var(--royal-blue);
+      position: absolute;
+      top: -5%;
+      left: -5%;
+      width: 110%;
+      height: 110%;
+
+      & > path {
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-weight: 200;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 1rem;
+  }
+
+  &__languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    &__language {
+      padding: 0.25rem 0.5rem;
+      border-radius: 1rem;
+      background: var(--primary-background);
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      font-size: 0.825rem;
+
+      &.SCSS {
+        background: var(--scss);
+        color: var(--white);
+      }
+
+      &.HTML {
+        background: var(--html);
+        color: var(--white);
+      }
+
+      &.CSS {
+        background: var(--css);
+        color: var(--white);
+      }
+
+      &.JavaScript {
+        background: var(--javascript);
+        color: var(--dark-charcoal);
+      }
+
+      &.PHP {
+        background: var(--php);
+        color: var(--dark-charcoal);
+      }
+
+      &.Solidity {
+        background: var(--solidity);
+        color: var(--white);
+      }
+    }
+  }
+}

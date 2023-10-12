@@ -72,7 +72,7 @@
       }
 
       &::before {
-        border-radius: 50%;
+        border-radius: 64% 36% 37% 63% / 44% 20% 80% 56%;
       }
 
       &::before {
@@ -83,11 +83,8 @@
         width: calc(100% + 1rem);
         height: calc(100% + 1rem);
 
-        background: linear-gradient(
-          to top right,
-          var(--royal-blue),
-          var(--green)
-        );
+        background: linear-gradient(var(--royal-blue), var(--green));
+        background-size: 200% 200%;
 
         z-index: -1;
       }
@@ -103,7 +100,7 @@
 
         overflow: hidden;
 
-        border-radius: 50%;
+        border-radius: 64% 36% 37% 63% / 44% 20% 80% 56%;
 
         img {
           opacity: 0.5;
@@ -140,10 +137,13 @@
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
   }
   100% {
-    transform: rotate(360deg);
+    background-position: 10% 0%;
   }
 }
 
