@@ -21,7 +21,7 @@ const Portfolio = async () => {
       <h1 className={styles.portfolio__title}>Portfolio</h1>
       <div className={styles.portfolio__projects}>
         {GitHubProjects.map((project) => (
-          <ProjectCard name={project.name} description={project.description} />
+          <ProjectCard key={project.name} name={project.name} description={project.description} />
         ))}
       </div>
     </section>
