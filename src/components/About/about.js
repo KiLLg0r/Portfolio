@@ -6,7 +6,7 @@ import ScrollNext from "@components/ScrollNext/scrollNext";
 const About = () => {
   return (
     <section className={styles.about} id="about">
-      <div className={styles.title}>Who am I ?</div>
+      <div className={styles.title}>&lt;Who am I ? &#47;&gt;</div>
       <div className={styles.container}>
         <div className={styles.container__left}>
           <div className={styles.container__left__picture}>

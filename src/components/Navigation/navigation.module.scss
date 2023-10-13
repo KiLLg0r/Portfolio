@@ -18,6 +18,13 @@
     align-items: center;
     gap: 1rem;
 
+    box-shadow:
+      0 1px 1px rgba(3, 7, 18, 0.08),
+      0 5px 4px rgba(3, 7, 18, 0.06),
+      0 12px 9px rgba(3, 7, 18, 0.05),
+      0 20px 15px rgba(3, 7, 18, 0.03),
+      0 32px 24px rgba(3, 7, 18, 0.02);
+
     &__links {
       display: flex;
       gap: 1rem;
@@ -42,14 +49,14 @@
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: var(--secondary-foreground);
+          background-color: var(--royal-blue);
           transform-origin: bottom right;
           transition: transform 0.25s ease-out;
           transform: scaleX(0);
         }
 
         &:hover {
-          color: var(--secondary-foreground);
+          color: var(--royal-blue);
 
           &::after {
             transform: scaleX(1);
@@ -126,7 +133,7 @@
       &.show {
         position: fixed;
         right: 0;
-        opacity: 1; // Show the navigation when it's needed
+        opacity: 1;
         visibility: visible;
         padding: 2rem 0;
       }

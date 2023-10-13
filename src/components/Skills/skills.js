@@ -6,7 +6,7 @@ import Image from "next/image";
 const Skills = () => {
   return (
     <section id="skills" className={styles.skills}>
-      <div className={styles.title}>Skills</div>
+      <div className={styles.title}>&lt;Skills &#47;&gt;</div>
       <div className={styles.skills__group}>
         <div className={styles.skills__group__title}>FRONT-END</div>
         <div className={styles.skills__group__content}>

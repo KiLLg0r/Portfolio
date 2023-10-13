@@ -3,7 +3,7 @@
   padding-top: 6rem;
 
   &__title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: right;

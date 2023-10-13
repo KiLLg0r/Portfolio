@@ -6,7 +6,7 @@ $animation-duration: 1;
   position: relative;
 
   .title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
@@ -50,6 +50,7 @@ $animation-duration: 1;
       margin: 0.25rem;
       animation: animated_items 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
       transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      cursor: pointer;
 
       &:hover {
         background: var(--dark-royal-blue);
@@ -122,6 +123,10 @@ $animation-duration: 1;
   .skills__group:nth-child(3) .item:nth-child(#{$i}) {
     animation-delay: #{($i * $animation-duration + 11) * (1 / 22)}s;
   }
+}
+
+.skills:has(.item:hover) .item {
+  animation: none;
 }
 
 @keyframes animated_items {
