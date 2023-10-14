@@ -42,7 +42,7 @@ const Page = async ({ params }) => {
 
   return (
     <div className={styles.projectPage}>
-      <GoBack />
+      <GoBack to="/"/>
       <h1 className={styles.projectPage__title}>{params.slug}</h1>
       <a
         href={`https://github.com/KiLLg0r/${params.slug}`}
