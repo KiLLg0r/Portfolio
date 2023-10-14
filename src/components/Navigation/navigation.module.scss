@@ -88,6 +88,12 @@
   padding: 0.25rem;
   border-radius: 0.5rem;
   z-index: 10000;
+   box-shadow:
+      0 1px 1px rgba(3, 7, 18, 0.08),
+      0 5px 4px rgba(3, 7, 18, 0.06),
+      0 12px 9px rgba(3, 7, 18, 0.05),
+      0 20px 15px rgba(3, 7, 18, 0.03),
+      0 32px 24px rgba(3, 7, 18, 0.02);
 
   svg {
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
