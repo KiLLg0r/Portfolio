@@ -3,19 +3,26 @@ import styles from "./portfolio.module.scss";
 // Components
 import ProjectCard from "@components/Project card/projectCard";
 import ScrollNext from "@components/ScrollNext/scrollNext";
+import { Octokit } from "octokit";
+
+const octokit = new Octokit({
+  auth: process.env["NEXT_PUBLIC_GITHUB"],
+});
 
 const getGitHubProjects = async () => {
-  const res = await fetch("https://api.github.com/users/KiLLg0r/repos");
+  const res = await octokit.request("GET /users/{username}/repos", {
+    username: "KiLLg0r",
+    sort: "updated",
+    headers: {
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  });
 
-  return res.json();
+  return res.data;
 };
 
 const Portfolio = async ({ hideScroll = false }) => {
   const GitHubProjects = await getGitHubProjects();
-
-  GitHubProjects.sort((a, b) => {
-    return new Date(b.updated_at) - new Date(a.updated_at);
-  });
 
   return (
     <section id="portfolio" className={styles.portfolio}>

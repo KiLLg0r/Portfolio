@@ -10,13 +10,18 @@ body,
 body[data-theme="dark"] {
   --primary-background: #445469;
   --secondary-background: var(--dark-charcoal);
+  --tertiary-background: var(--darker-charcoal);
   --primary-foreground: #f8f6f0;
   --secondary-foreground: var(--light-gray);
+  --tertiary-foreground: var(--gray);
 
+  --light-charcoal: #aaaabf;
   --charcoal: #445469;
   --dark-charcoal: #293340;
+  --darker-charcoal: #1e2730;
   --white: #f8f6f0;
   --light-gray: #d9d7d2;
+  --gray: #b3b1ad;
   --royal-blue: #3a5ad1;
   --dark-royal-blue: #2e48a6;
   --green: #64e141;
@@ -44,8 +49,10 @@ body[data-theme="dark"] {
 body[data-theme="light"] {
   --primary-background: #f8f6f0;
   --secondary-background: var(--light-gray);
+  --tertiary-background: var(--gray);
   --primary-foreground: #293340;
   --secondary-foreground: var(--charcoal);
+  --tertiary-foreground: var(--light-charcoal);
 
   background-image: radial-gradient(
       ellipse at center,

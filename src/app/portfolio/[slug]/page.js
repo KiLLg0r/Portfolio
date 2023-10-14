@@ -2,6 +2,7 @@ import styles from "./page.module.scss";
 
 // Components
 import { Octokit } from "octokit";
+import GoBack from "@components/Go back/goBack";
 
 const octokit = new Octokit({
   auth: process.env["NEXT_PUBLIC_GITHUB"],
@@ -41,30 +42,44 @@ const Page = async ({ params }) => {
 
   return (
     <div className={styles.projectPage}>
-      <h1 className={styles.projectPage__title}>
-        {params.slug}
-        <div>
-          <a
-            href={`https://github.com/KiLLg0r/${params.slug}`}
-          >{`https://github.com/KiLLg0r/${params.slug}`}</a>
-        </div>
-      </h1>
-      {Object?.keys(languages)?.length > 0 && (
+      <GoBack />
+      <h1 className={styles.projectPage__title}>{params.slug}</h1>
+      <a
+        href={`https://github.com/KiLLg0r/${params.slug}`}
+        className={styles.projectPage__link}
+      >{`https://github.com/KiLLg0r/${params.slug}`}</a>
+      <div className={styles.projectPage__subtitle}>Languages:</div>
+      {Object?.keys(languages)?.length > 0 ? (
         <div className={styles.projectPage__languages}>
-          {Object.keys(languages).map((key) => (
-            <div
-              key={key}
-              className={`${styles.projectPage__languages__language} ${styles[key]}`}
-            >
-              {key}
-            </div>
-          ))}
+          <div className={styles.projectPage__languages__list}>
+            {Object.keys(languages).map((key) => (
+              <span
+                key={key}
+                className={`${styles.projectPage__languages__language} ${styles[key]}`}
+              >
+                {key}
+              </span>
+            ))}
+          </div>
         </div>
+      ) : (
+        <p className={styles.projectPage__placeholder}>
+          Without programming languages
+        </p>
       )}
-      {description && (
+      <div className={styles.projectPage__subtitle}>Description:</div>
+      {description ? (
         <p className={styles.projectPage__description}>{description}</p>
+      ) : (
+        <p className={styles.projectPage__placeholder}>
+          No description provided
+        </p>
       )}
-      <div dangerouslySetInnerHTML={{ __html: readme }}></div>
+      <div className={styles.projectPage__subtitle}>Readme:</div>
+      <div
+        dangerouslySetInnerHTML={{ __html: readme }}
+        className={styles.projectPage__readme}
+      ></div>
     </div>
   );
 };

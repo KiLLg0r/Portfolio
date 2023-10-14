@@ -1,0 +1,22 @@
+.goBack {
+  font-size: 1.25rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  background: var(--secondary-background);
+  cursor: pointer;
+  color: var(--primary-foreground);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  svg {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    box-shadow: 4px 4px 0 var(--primary-foreground);
+  }
+}
