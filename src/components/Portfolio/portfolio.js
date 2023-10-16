@@ -1,7 +1,7 @@
 import styles from "./portfolio.module.scss";
 
 // Components
-import ProjectCard from "@components/Project card/projectCard";
+import ProjectCard from "@components/ProjectCard/projectCard";
 import ScrollNext from "@components/ScrollNext/scrollNext";
 import { Octokit } from "octokit";
 

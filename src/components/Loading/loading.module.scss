@@ -1,0 +1,24 @@
+.square {
+  position: absolute;
+  inset: 0;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border: 3px solid var(--royal-blue);
+  margin: auto;
+  height: 20rem;
+  width: 20rem;
+
+  @for $i from 0 through 17 {
+    &.r#{$i} {
+      animation-name: r#{$i};
+    }
+
+    @keyframes r#{$i} {
+      50% {
+        border-radius: 50%;
+        transform: rotate((270 - (10 * $i)) * 1deg);
+        height: 6rem;
+      }
+    }
+  }
+}
